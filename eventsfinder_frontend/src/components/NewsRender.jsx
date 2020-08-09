@@ -16,6 +16,10 @@ componentDidMount() {
        this.setState({
            news: response.data
        })
+       
+       })
+       .catch(function(error){
+        console.log(error)
     })
 
 }
