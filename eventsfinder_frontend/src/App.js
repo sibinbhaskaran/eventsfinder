@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+
 
 import NewsRender from './components/NewsRender'
 
@@ -13,7 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='container'>
-        <h2>test</h2>
+        <h2>app js</h2>
         <NewsRender />
       </div>
     )

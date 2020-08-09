@@ -14,7 +14,7 @@ componentDidMount() {
     axios.get('http://newsapi.org/v2/top-headlines?country=us&apiKey=1c6cb1152ebf456980d49ae987535a97')
     .then((response) =>{
        this.setState({
-           news: response.data
+        //    news: response.data.articles
        })
        
        })
@@ -28,7 +28,18 @@ componentDidMount() {
     render() {
         return (
             <div>
-                
+                {
+                    this.state.news.map(newsData => {
+                        return (
+                            <ul>
+                        <li>{newsData.title}</li>
+                        <li>{newsData.description}</li>
+                        
+                       <a href= {newsData.url}> <img src={newsData.urlToImage} alt='news'/></a>
+                        </ul>
+                        )
+                    }) 
+                }
             </div>
         )
     }
