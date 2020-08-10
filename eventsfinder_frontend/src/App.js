@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 
 import NewsRender from './components/NewsRender'
+import EventsFinder from './components/EventsFinder'
 
 export default class App extends Component {
   constructor(props) {
@@ -14,7 +15,8 @@ export default class App extends Component {
     return (
       <div className='container'>
         <h2>app js</h2>
-        <NewsRender />
+        {/* <NewsRender /> */}
+        <EventsFinder />
       </div>
     )
   }
