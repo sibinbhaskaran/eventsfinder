@@ -51,9 +51,15 @@ searchEvents(event) {
                 {
                     this.state.eventArray.map(eventData => {
                         return (
-                            <ul>
+                            <ul key={eventData.id}>
                                 <li>{eventData.name}</li>
                                 <a href= {eventData.url}><img src={eventData.images[1].url} alt='pics'/></a> 
+                                <li>{eventData.dates.start.localDate}</li>
+                        <li>Venue:{eventData._embedded.venues[0].name}</li>
+                        <li>Address:{eventData._embedded.venues[0].address.line1}</li>
+                        <li>{eventData._embedded.venues[0].address.line2}</li>
+                        <li>{eventData._embedded.venues[0].postalCode}</li>
+
                                 
                                
                             </ul>
