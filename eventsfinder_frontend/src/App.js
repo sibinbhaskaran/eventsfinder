@@ -3,6 +3,8 @@ import NewsRender from './components/NewsRender'
 import EventsFinder from './components/EventsFinder'
 import Suggestion from './components/Suggestion'
 import axios from 'axios'
+import SuggestionDisplay from './components/SuggestionDisplay'
+
 
 
 const baseUrl = 'http://localhost:3003';
@@ -40,7 +42,8 @@ export default class App extends Component {
         <h2>app js</h2>
         {/* <NewsRender /> */}
         {/* <EventsFinder /> */}
-        <Suggestion />
+        {/* <Suggestion /> */}
+        < SuggestionDisplay events = {this.state.events} />
       </div>
     )
   }
