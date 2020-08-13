@@ -43,7 +43,7 @@ export default class App extends Component {
         <h2>app js</h2>
         {/* <NewsRender /> */}
         {/* <EventsFinder /> */}
-        {/* <Suggestion /> */}
+        <Suggestion />
         < SuggestionDisplay events = {this.state.events} />
       </div>
     )

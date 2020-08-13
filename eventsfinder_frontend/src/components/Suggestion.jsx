@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SuggestionDisplay from './SuggestionDisplay';
 const axios = require('axios')
 
 const baseUrl = 'http://localhost:3003';
@@ -69,6 +70,7 @@ suggestionSubmit(event) {
                     <input type='submit' value ="click to add" />
                 </form>
             </div>
+            
         )
     }
 }
