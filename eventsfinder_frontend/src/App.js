@@ -7,6 +7,7 @@ import SuggestionDisplay from './components/SuggestionDisplay'
 
 
 
+
 const baseUrl = 'http://localhost:3003';
 
 export default class App extends Component {
