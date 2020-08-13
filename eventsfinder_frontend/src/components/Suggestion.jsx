@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import SuggestionDisplay from './SuggestionDisplay';
+import { Redirect} from 'react-router-dom'
 const axios = require('axios')
+
 
 const baseUrl = 'http://localhost:3003';
 
@@ -12,6 +14,7 @@ export default class Suggestion extends Component {
             description: '',
             image: '',
             user_name: '',
+            redirect: null,
         }
         this.handleChange = this.handleChange.bind(this)
         this.suggestionSubmit = this.suggestionSubmit.bind(this)
@@ -41,6 +44,7 @@ suggestionSubmit(event) {
         description: '',
         image: '',
         user_name: '',
+        redirect: '/display'
        })
    })
    .catch(function (error) {
@@ -56,6 +60,10 @@ suggestionSubmit(event) {
 
 
     render() {
+        if(this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
+
         return (
             <div>
                 <form onSubmit = {this.suggestionSubmit}>
