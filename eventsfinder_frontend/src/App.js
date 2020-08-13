@@ -4,6 +4,8 @@ import EventsFinder from './components/EventsFinder'
 import Suggestion from './components/Suggestion'
 import axios from 'axios'
 import SuggestionDisplay from './components/SuggestionDisplay'
+import { Switch, Route} from 'react-router-dom'
+import NavBar from './components/NavBar'
 
 
 
@@ -40,11 +42,17 @@ export default class App extends Component {
   render() {
     return (
       <div className='container'>
-        <h2>app js</h2>
-        {/* <NewsRender /> */}
-        {/* <EventsFinder /> */}
-        <Suggestion />
-        < SuggestionDisplay events = {this.state.events} />
+       <NavBar />
+        <Switch>
+          <Route exact path='/' component={NewsRender} />
+          <Route exact path='/eventsfinder' component={EventsFinder} />
+          <Route exact path='/sugesstion'  component={Suggestion} />
+          <Route
+           exact path='/display'
+           render={() => (<SuggestionDisplay events = {this.state.events} /> )} />
+        </Switch>
+        
+       
       </div>
     )
   }
