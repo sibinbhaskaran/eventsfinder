@@ -4,7 +4,7 @@ import EventsFinder from './components/EventsFinder'
 import Suggestion from './components/Suggestion'
 import axios from 'axios'
 import SuggestionDisplay from './components/SuggestionDisplay'
-import { Switch, Route, Redirect} from 'react-router-dom'
+import { Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 
 

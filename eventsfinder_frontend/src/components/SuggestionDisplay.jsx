@@ -17,6 +17,7 @@ export default class SuggestionDisplay extends Component {
                                 <li>Description:{eventsData.description}</li>
                                 <li>Location:{eventsData.location}</li>
                                 <li>{eventsData.image}</li>
+                                <li>{eventsData.user_name}</li>
                                 <li>Posted Date:{moment(eventsData.date).format('MM/DD/YYYY')}</li>
                              
                             </ul>

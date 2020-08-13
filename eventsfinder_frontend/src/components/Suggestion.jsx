@@ -10,6 +10,7 @@ export default class Suggestion extends Component {
     constructor(props){
         super(props)
         this.state = {
+            events:[],
             location: '',
             description: '',
             image: '',
@@ -18,6 +19,7 @@ export default class Suggestion extends Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.suggestionSubmit = this.suggestionSubmit.bind(this)
+        
     }
 
     handleChange (event) {
@@ -25,6 +27,10 @@ export default class Suggestion extends Component {
             [event.currentTarget.id]:event.target.value
         })
     }
+
+   
+
+
 
 suggestionSubmit(event) {
     event.preventDefault();
@@ -66,7 +72,7 @@ suggestionSubmit(event) {
 
         return (
             <div>
-                <form onSubmit = {this.suggestionSubmit}>
+                <form onSubmit = {(event) => this.suggestionSubmit(event)}>
                     <label htmlFor='description'>Description:</label>
                     <input type='text' value={this.state.description} onChange={this.handleChange} id='description' placeholder='enter description'/> <br/>
                     <label htmlFor='location'>location:</label>
