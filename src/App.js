@@ -26,6 +26,7 @@ export default class App extends Component {
     }
     this.componentDidMount = this.componentDidMount.bind(this)
     
+    
   }
   componentDidMount() {
     this.getUserEvents()
@@ -42,6 +43,8 @@ export default class App extends Component {
       console.log(error)
   })
   }
+
+
 
 
 

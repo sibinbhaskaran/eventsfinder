@@ -34,7 +34,7 @@ export default class Suggestion extends Component {
             [event.currentTarget.id]:event.target.value
         })
     }
-
+   
    
 
 
