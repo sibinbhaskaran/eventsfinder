@@ -4,7 +4,14 @@ import { Redirect} from 'react-router-dom'
 const axios = require('axios')
 
 
-const baseUrl = 'http://localhost:3003';
+// const baseUrl = 'http://localhost:3003';
+let baseUrl;
+
+if (process.env.NODE_ENV === "development") {
+  baseUrl = "http://localhost:3003";
+} else {
+  baseUrl = "https://eventfinderapi.herokuapp.com";
+}
 
 export default class Suggestion extends Component {
     constructor(props){

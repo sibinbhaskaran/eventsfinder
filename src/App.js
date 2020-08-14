@@ -7,10 +7,16 @@ import SuggestionDisplay from './components/SuggestionDisplay'
 import { Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 
+let baseUrl;
+
+if (process.env.NODE_ENV === "development") {
+  baseUrl = "http://localhost:3003";
+} else {
+  baseUrl = "https://eventfinderapi.herokuapp.com";
+}
 
 
-
-const baseUrl = 'http://localhost:3003';
+// const baseUrl = 'http://localhost:3003';
 
 export default class App extends Component {
   constructor(props) {
