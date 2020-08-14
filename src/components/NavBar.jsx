@@ -8,7 +8,7 @@ export default class NavBar extends Component {
                 <Link to='/'>HOME</Link>
                 <Link to='/eventsfinder'>FIND EVENTS</Link>
                 <Link to='/display'>USERS SUGGESTIONS</Link>
-                <Link to='/sugesstion'>ADD SUGGESTIONS</Link>
+                <Link to='/suggestion'>ADD SUGGESTIONS</Link>
             </div>
         )
     }
