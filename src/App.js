@@ -6,6 +6,9 @@ import axios from 'axios'
 import SuggestionDisplay from './components/SuggestionDisplay'
 import { Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
+import CurrentLocation from './components/CurrentLocation'
+
+
 
 
 let baseUrl;
@@ -61,6 +64,7 @@ export default class App extends Component {
            exact path='/display'
            render={() => (<SuggestionDisplay events = {this.state.events} /> )} />
         </Switch>
+        <CurrentLocation  />
         
        
       </div>
