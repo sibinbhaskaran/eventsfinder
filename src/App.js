@@ -7,6 +7,7 @@ import SuggestionDisplay from './components/SuggestionDisplay'
 import { Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 
+
 let baseUrl;
 
 if (process.env.NODE_ENV === "development") {
