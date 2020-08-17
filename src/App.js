@@ -57,12 +57,14 @@ export default class App extends Component {
       <div className='container'>
        <NavBar />
         <Switch>
-          {/* <Route exact path='/' component={NewsRender} /> */}
+          {/* <Route exact path='/' component={NewsRender}/> */}
+          
           <Route exact path='/eventsfinder' component={EventsFinder} />
           <Route exact path='/suggestion'  component={Suggestion} />
           <Route
            exact path='/display'
            render={() => (<SuggestionDisplay events = {this.state.events} /> )} />
+           
         </Switch>
         <CurrentLocation  />
         
