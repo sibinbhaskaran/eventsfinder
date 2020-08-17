@@ -32,7 +32,8 @@ axios.get(mainUrl)
         feels: response.data.main.feels_like,
         humidity: response.data.main.humidity,
         desc: response.data.weather[0].description,
-        location: response.data.name
+        location: response.data.name,
+        code: response.data.sys.country,
     })
 }).catch(function(error){
     console.log(error)
@@ -45,12 +46,13 @@ axios.get(mainUrl)
         return (
             <div>
                 <ul>
-                    <li>Temp:{this.state.temp}</li>
+                    <li>Temp:{this.state.temp}°F</li>
                    
-                    <li>Feels like:{this.state.feels}</li>
-                    <li>Humidity:{this.state.humidity}</li>
+                    <li>Feels like:{this.state.feels}°F</li>
+                    <li>Humidity:{this.state.humidity}%</li>
                     <li>weather:{this.state.desc}</li>
-                    <li>Location:{this.state.location}</li>
+                    <li>Location:{this.state.location}, {this.state.code}</li>
+
                    
                 </ul>
                 
