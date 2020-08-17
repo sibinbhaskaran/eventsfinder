@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+body{
+background-image: url(./img.jpg);
+
+}
+.justify-content-center{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 40px;
+  
+  
+  
+} 
+
+

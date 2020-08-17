@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Carousel from 'react-bootstrap/Carousel'
+import { Container } from 'react-bootstrap'
 
 export default class NewsRender extends Component {
     constructor(props){
@@ -27,21 +29,33 @@ componentDidMount() {
 
     render() {
         return (
+            
+          <Container>
             <div>
                 {
                     this.state.news.map(newsData => {
                         return (
-                            <ul>
-                        <li>{newsData.title}</li>
-                        <a href= {newsData.url}> <img src={newsData.urlToImage} alt='news'/></a>
-                        <li>{newsData.description}</li>
+                            <div>
+                            <Carousel className="d-inline p-1 bg-dark text-white">
+                            <Carousel.Item>
                         
-                      
-                        </ul>
+                        <a href= {newsData.url}> <img className="d-block" src={newsData.urlToImage} alt='First slide'/></a>
+                        
+                        <Carousel.Caption>
+                        <h4>{newsData.title}</h4>
+                        <p>{newsData.description}</p>
+                        </Carousel.Caption>
+                        </Carousel.Item>
+                        </Carousel>
+                        
+                        </div>
                         )
+                      
                     }) 
                 }
-            </div>
+             
+             </div>
+             </Container>
         )
     }
 }
