@@ -36,10 +36,10 @@
     transform: rotate(360deg);
   }
 }
-  body{ 
+/* body{
 background-image: url(./img.jpg);
 
-}
+}  */
 /* .justify-content-center{
   overflow: hidden;
   position: fixed;
@@ -91,4 +91,11 @@ li{
 .news-h4,.news-p{
   
   color: white;
+}
+
+#eventsfinder{
+  padding-top: 100px;
+}
+#city {
+  width: 50%;
 }

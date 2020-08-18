@@ -67,7 +67,7 @@ export default class App extends Component {
            render={() => (<SuggestionDisplay events = {this.state.events} /> )} />
            
         </Switch>
-        <CurrentLocation  />
+        {/* <CurrentLocation  /> */}
         
        
       </div>

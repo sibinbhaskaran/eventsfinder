@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export default class EventsFinder extends Component {
     constructor(props){
@@ -39,15 +42,22 @@ searchEvents(event) {
 
     render() {
         return (
+            <Container>
             <div>
-            <form onSubmit={ (evt) => this.searchEvents(evt) }>
-                <label htmlFor="city">Enter city  </label>
-                <input type="text" id="city"
+            <Form onSubmit={ (evt) => this.searchEvents(evt) }>
+                {/* <label htmlFor="city">Enter city  </label> */}
+                <Form.Group id="eventsfinder">
+                <Form.Control
+                 type="text" id="city"
                     onChange={ (evt) => this.handleChange(evt) }
                     value={ this.state.city }/>
-                <input type="submit" value="Search events"/>
-            </form>
-            <div>
+                    
+                <Button type="submit" variant="secondary" id="btn">Search Events</Button>
+                
+                </Form.Group>
+                </Form>
+            
+             <div> 
                 {
                     this.state.eventArray.map(eventData => {
                         return (
@@ -71,7 +81,7 @@ searchEvents(event) {
            
 
             </div>
-            
+            </Container> 
         )
     }
 }
