@@ -22,7 +22,7 @@ export default class NewsRender extends Component {
     }
 
 componentDidMount() {
-    axios.get('http://newsapi.org/v2/top-headlines?country=us&apiKey=1c6cb1152ebf456980d49ae987535a97')
+    axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=1c6cb1152ebf456980d49ae987535a97')
     .then((response) =>{
        this.setState({
            news: response.data.articles
@@ -66,4 +66,4 @@ componentDidMount() {
         )
     }
 }
-// http://newsapi.org/v2/top-headlines?country=us&apiKey=1c6cb1152ebf456980d49ae987535a97
+// https://newsapi.org/v2/top-headlines?country=us&apiKey=1c6cb1152ebf456980d49ae987535a97
