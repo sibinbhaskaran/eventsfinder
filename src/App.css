@@ -36,10 +36,10 @@
     transform: rotate(360deg);
   }
 }
-/* body{
+ body{
 background-image: url(./img.jpg);
 
-}  */
+}  
 /* .justify-content-center{
   overflow: hidden;
   position: fixed;
@@ -98,4 +98,25 @@ li{
 }
 #city {
   width: 50%;
+}
+
+.events-image {
+  border: 2px solid black;
+  border-radius: 20px;
+  
+  width: 400px;
+  height: 400px;
+
+}
+.events-ul{
+  list-style: none;
+}
+
+li{
+  color: white;
+}
+
+#event-name{
+
+  text-decoration: underline overline;
 }
