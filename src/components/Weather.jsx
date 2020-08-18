@@ -34,6 +34,7 @@ axios.get(mainUrl)
         desc: response.data.weather[0].description,
         location: response.data.name,
         code: response.data.sys.country,
+        icon: response.data.weather[0].icon
     })
 }).catch(function(error){
     console.log(error)
@@ -46,12 +47,14 @@ axios.get(mainUrl)
         return (
             <div class="weather">
                 <ul class="weather-ul">
-                    <li id="weather-li">Temp:{this.state.temp}°F</li>
+                    <li id="weather-li">Temp:{this.state.temp}°F <img src ={`http://openweathermap.org/img/w/${this.state.icon}.png`} 
+                   alt="weather-img" /></li>
                    
                     <li id="weather-li">Feels like:{this.state.feels}°F</li>
                     <li id="weather-li">Humidity:{this.state.humidity}%</li>
                     <li id="weather-li">weather:{this.state.desc}</li>
                     <li id="weather-li">Location:{this.state.location}, {this.state.code}</li>
+                    
 
                    
                 </ul>
