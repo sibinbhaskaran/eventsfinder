@@ -39,7 +39,7 @@
  body{
 background-image: url(./img.jpg);
 
-}  
+} 
 /* .justify-content-center{
   overflow: hidden;
   position: fixed;
@@ -93,7 +93,7 @@ li{
   color: white;
 }
 
-#eventsfinder{
+#eventsfinder,#suggestion{
   padding-top: 100px;
 }
 #city {
@@ -119,4 +119,7 @@ li{
 #event-name{
 
   text-decoration: underline overline;
+}
+.form-label{
+  color:white;
 }

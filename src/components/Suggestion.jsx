@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import SuggestionDisplay from './SuggestionDisplay';
 import { Redirect} from 'react-router-dom'
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 const axios = require('axios')
 
 
@@ -78,20 +81,25 @@ suggestionSubmit(event) {
         }
 
         return (
+            <Container>
             <div>
-                <form onSubmit = {(event) => this.suggestionSubmit(event)}>
-                    <label htmlFor='description'>Description:</label>
-                    <input type='text' value={this.state.description} onChange={this.handleChange} id='description' placeholder='enter description'/> <br/>
-                    <label htmlFor='location'>location:</label>
-                    <input type='text' value={this.state.location} onChange={this.handleChange} id='location' placeholder='enter location details'/> <br/>
-                    <label htmlFor='image'>Image:</label>
-                    <input type='text' value={this.state.image} onChange={this.handleChange} id='image' placeholder='upload image' /> <br/>
-                    <label htmlFor='image'>Created by:</label>
-                    <input type='text' value={this.state.user_name} onChange={this.handleChange} id='user_name' placeholder='enter your name'/> <br/>
-                    <input type='submit' value ="click to add" />
-                </form>
+                <Form onSubmit = {(event) => this.suggestionSubmit(event)}>
+                <Form.Group id="suggestion">
+                <Form.Label>Description</Form.Label>
+                    <Form.Control
+                    type='text' value={this.state.description} onChange={this.handleChange} id='description' placeholder='enter description'/> <br/>
+                    <Form.Label>Location</Form.Label>
+                    <Form.Control type='text' value={this.state.location} onChange={this.handleChange} id='location' placeholder='enter location details'/> <br/>
+                    <Form.Label>Image</Form.Label>
+                    <Form.Control type='text' value={this.state.image} onChange={this.handleChange} id='image' placeholder='upload image' /> <br/>
+                    <Form.Label>User Name</Form.Label>
+                    <Form.Control type='text' value={this.state.user_name} onChange={this.handleChange} id='user_name' placeholder='enter your name'/> <br/>
+                    <Button type='submit' variant="secondary" id="suggestion-btn" >
+                        Click To Add</Button>
+                        </Form.Group>
+                </Form>
             </div>
-            
+            </Container> 
         )
     }
 }
