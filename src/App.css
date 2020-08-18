@@ -36,48 +36,16 @@
     transform: rotate(360deg);
   }
 }
- body{
+body{
 background-image: url(./img.jpg);
 
-} 
-/* .justify-content-center{
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  padding: 40px;
-}   */
-
-/* .weather-ul{
-
-text-align: left;
-list-style-type: none;
-z-index: 1;
-position: fixed;
-padding-left: 70%;
-border: 2px solid black;
-
-
-
 }
-li{
-  color: white;
-  text-decoration: none;
-} */
+
 
 .news-main{
   padding-top: 100px;
   display: inline-flex;
   flex-flow: row;
-
-  /* text-align: center;
-  border: 2px solid gold;
-  /* border-radius: 20px; */
-  /* width: 150px; */
-  
- /* display: inline-block;
- background-color: transparent;
- text-shadow: 0px 0px 10px grey;  */
 }
 
 .news-image{
@@ -94,7 +62,7 @@ li{
 }
 
 #eventsfinder,#suggestion{
-  padding-top: 100px;
+  padding-top: 200px;
 }
 #city {
   width: 50%;
@@ -129,4 +97,17 @@ li{
 
 .suggestionDisplay{
   list-style: none;
+}
+
+.weather-ul{
+ 
+  list-style: none;
+}
+
+.nav-weather{
+  color: black;
+}
+#weather-li{
+
+  color: black;
 }

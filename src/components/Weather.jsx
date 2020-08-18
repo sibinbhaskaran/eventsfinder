@@ -46,12 +46,12 @@ axios.get(mainUrl)
         return (
             <div class="weather">
                 <ul class="weather-ul">
-                    <li>Temp:{this.state.temp}°F</li>
+                    <li id="weather-li">Temp:{this.state.temp}°F</li>
                    
-                    <li>Feels like:{this.state.feels}°F</li>
-                    <li>Humidity:{this.state.humidity}%</li>
-                    <li>weather:{this.state.desc}</li>
-                    <li>Location:{this.state.location}, {this.state.code}</li>
+                    <li id="weather-li">Feels like:{this.state.feels}°F</li>
+                    <li id="weather-li">Humidity:{this.state.humidity}%</li>
+                    <li id="weather-li">weather:{this.state.desc}</li>
+                    <li id="weather-li">Location:{this.state.location}, {this.state.code}</li>
 
                    
                 </ul>
