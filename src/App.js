@@ -7,6 +7,7 @@ import SuggestionDisplay from './components/SuggestionDisplay'
 import { Switch, Route} from 'react-router-dom'
 import Navigation from './components/Navigation'
 import CurrentLocation from './components/CurrentLocation'
+import NewsRenderSec from './components/NewsRenderSec'
 
 
 
@@ -58,8 +59,8 @@ export default class App extends Component {
        
        <Navigation />
         <Switch>
-          <Route exact path='/' component={NewsRender}/>
-          
+          {/* <Route exact path='/' component={NewsRender}/> */}
+          <Route exact path='/' component={NewsRenderSec}/>
           <Route exact path='/eventsfinder' component={EventsFinder} />
           <Route exact path='/suggestion'  component={Suggestion} />
           <Route
@@ -68,7 +69,7 @@ export default class App extends Component {
            
         </Switch>
         {/* <CurrentLocation  /> */}
-        
+        {/* <NewsRenderSec /> */}
        
       </div>
     )

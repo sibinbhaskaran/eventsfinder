@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 // import Carousel from 'react-bootstrap/Carousel'
 // import { Container } from 'react-bootstrap'
-import {Carousel}  from 'react-bootstrap';
+// import {Carousel}  from 'react-bootstrap';
 
 let baseUrl;
 
