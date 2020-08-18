@@ -116,10 +116,17 @@ li{
   color: white;
 }
 
-#event-name{
+#event-name, .suggestion-desc{
 
   text-decoration: underline overline;
 }
 .form-label{
   color:white;
+}
+.display{
+  padding: 100px;
+}
+
+.suggestionDisplay{
+  list-style: none;
 }
