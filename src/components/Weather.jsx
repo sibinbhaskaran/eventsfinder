@@ -44,8 +44,8 @@ axios.get(mainUrl)
 
     render() {
         return (
-            <div>
-                <ul>
+            <div class="weather">
+                <ul class="weather-ul">
                     <li>Temp:{this.state.temp}°F</li>
                    
                     <li>Feels like:{this.state.feels}°F</li>

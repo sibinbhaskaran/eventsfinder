@@ -5,7 +5,7 @@ import Suggestion from './components/Suggestion'
 import axios from 'axios'
 import SuggestionDisplay from './components/SuggestionDisplay'
 import { Switch, Route} from 'react-router-dom'
-import NavBar from './components/NavBar'
+import Navigation from './components/Navigation'
 import CurrentLocation from './components/CurrentLocation'
 
 
@@ -55,7 +55,8 @@ export default class App extends Component {
   render() {
     return (
       <div className='container'>
-       <NavBar />
+       
+       <Navigation />
         <Switch>
           <Route exact path='/' component={NewsRender}/>
           
@@ -66,7 +67,7 @@ export default class App extends Component {
            render={() => (<SuggestionDisplay events = {this.state.events} /> )} />
            
         </Switch>
-        {/* <CurrentLocation  /> */}
+        <CurrentLocation  />
         
        
       </div>
