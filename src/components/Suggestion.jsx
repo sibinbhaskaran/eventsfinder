@@ -50,11 +50,11 @@ suggestionSubmit(event) {
     image: this.state.image,
     user_name:this.state.user_name,
 
-   })
-   .then(function (response) {
+   }).then(function (response) {
        console.log(response);
-   })
-   .then( ()=>{
+       
+   }).then( ()=>{
+       
        this.setState({
         location: '',
         description: '',
@@ -63,7 +63,7 @@ suggestionSubmit(event) {
         redirect: '/display'
        })
    })
-   .catch(function (error) {
+.catch(function (error) {
        console.log(error);
    })
    

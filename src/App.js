@@ -48,8 +48,7 @@ export default class App extends Component {
       console.log(error)
   })
   }
-
-
+ 
 
 
 
@@ -62,7 +61,8 @@ export default class App extends Component {
           {/* <Route exact path='/' component={NewsRender}/> */}
           <Route exact path='/' component={NewsRenderSec}/>
           <Route exact path='/eventsfinder' component={EventsFinder} />
-          <Route exact path='/suggestion'  component={Suggestion} />
+          <Route exact path='/suggestion'
+          render={() => (<Suggestion addEvent = {this.addEvent} /> )}  />
           <Route
            exact path='/display'
            render={() => (<SuggestionDisplay events = {this.state.events} /> )} />

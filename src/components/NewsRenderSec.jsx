@@ -24,7 +24,7 @@ componentDidMount() {
         }
         })
         .then((response)=>{
-          console.log(response)
+        //   console.log(response)
           this.setState({
               newsSecond:response.data
           })
